@@ -10,6 +10,6 @@ You can use this view just by calling method:
 
 and can easily hide loading just by calling method:
 
-NewLoadingView.hideLoading()
+    NewLoadingView.hideLoading()
 
 That's it.
