@@ -40,21 +40,6 @@ class NewLoadingView: UIView {
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
-//    lazy var leftTimeLabel: UILabel = {
-//        let label = UILabel()
-//        label.text = self.timeSelected[0]
-//        label.font = UIFont(name: "Roboto-Medium", size: 16)
-//        label.textColor = Theme.gradientColor1
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        return label
-//    }()
-    
-//    fileprivate lazy var loadingSpinner: UIActivityIndicatorView = {
-//        var activityIndicator  = UIActivityIndicatorView(style: .whiteLarge)
-//        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-//        activityIndicator.hidesWhenStopped = true
-//        return activityIndicator
-//    }()
     
     fileprivate lazy var background:UIView = {
         let v = UIView()
@@ -63,14 +48,6 @@ class NewLoadingView: UIView {
         v.alpha = 0.6
         return v
     }()
-    
-//    fileprivate lazy var progress:UIProgressView = {
-//        var prog = UIProgressView()
-//        prog.progress = 0.5
-//        prog.progressTintColor = .white
-//        prog.translatesAutoresizingMaskIntoConstraints = false
-//        return prog
-//    }()
     
     fileprivate func setupViews(){
         self.addSubview(background)
@@ -88,13 +65,12 @@ class NewLoadingView: UIView {
         self.addSubview(loadingText)
         loadingText.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         loadingText.topAnchor.constraint(equalTo: self.rotatingCirclesView.bottomAnchor).isActive = true
-//        loadingText.heightAnchor.constraint(equalToConstant: 100).isActive = true
-//        loadingText.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
     static func hideLoading(){
         loadingView?.removeFromSuperview()
     }
+    
     //When you're inflating with code
     override init(frame: CGRect) {
         super.init(frame: frame)
